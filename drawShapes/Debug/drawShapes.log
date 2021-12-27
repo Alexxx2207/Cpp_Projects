@@ -1,0 +1,7 @@
+﻿  drawShapes.cpp
+D:\Programming\C++\drawShapes\drawShapes.cpp(93,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Programming\C++\drawShapes\drawShapes.cpp(95,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\drawShapes\drawShapes.cpp(99,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Programming\C++\drawShapes\drawShapes.cpp(153,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Programming\C++\drawShapes\drawShapes.cpp(157,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  drawShapes.vcxproj -> D:\Programming\C++\drawShapes\Debug\drawShapes.exe
