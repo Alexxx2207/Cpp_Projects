@@ -26,21 +26,17 @@ void Factorial()
 		return number <= 1 ? 1 : factorial_non_tailed(number - 1) * number;
 	};
 
-	std::cout << factorial_tailed(0, 1) << std::endl;
-	std::cout << factorial_tailed(1, 1) << std::endl;
-	std::cout << factorial_tailed(2, 1) << std::endl;
-	std::cout << factorial_tailed(3, 1) << std::endl;
-	std::cout << factorial_tailed(4, 1) << std::endl;
-	std::cout << factorial_tailed(5, 1) << std::endl;
+	for (int i = 0; i <= 5; i++)
+	{
+		std::cout << factorial_tailed(i, 1) << std::endl;
+	}
 
 	std::cout << std::endl;
 
-	std::cout << factorial_non_tailed(0) << std::endl;
-	std::cout << factorial_non_tailed(1) << std::endl;
-	std::cout << factorial_non_tailed(2 ) << std::endl;
-	std::cout << factorial_non_tailed(3) << std::endl;
-	std::cout << factorial_non_tailed(4) << std::endl;
-	std::cout << factorial_non_tailed(5) << std::endl;
+	for (int i = 0; i <= 5; i++)
+	{
+		std::cout << factorial_non_tailed(i) << std::endl;
+	}
 }
 
 void Fibonacci()
@@ -55,19 +51,15 @@ void Fibonacci()
 		return n <= 1 ? n : fibonacci_non_tailed(n - 1) + fibonacci_non_tailed(n - 2);
 	};
 
-	std::cout << fibonacci_tailed(0, 0, 1) << std::endl;
-	std::cout << fibonacci_tailed(1, 0, 1) << std::endl;
-	std::cout << fibonacci_tailed(2, 0, 1) << std::endl;
-	std::cout << fibonacci_tailed(3, 0, 1) << std::endl;
-	std::cout << fibonacci_tailed(4, 0, 1) << std::endl;
-	std::cout << fibonacci_tailed(5, 0, 1) << std::endl;
-
+	for (int i = 0; i <= 5; i++)
+	{
+		std::cout << fibonacci_tailed(i, 0, 1) << std::endl;
+	}
+	
 	std::cout << std::endl;
 
-	std::cout << fibonacci_non_tailed(0) << std::endl;
-	std::cout << fibonacci_non_tailed(1) << std::endl;
-	std::cout << fibonacci_non_tailed(2) << std::endl;
-	std::cout << fibonacci_non_tailed(3) << std::endl;
-	std::cout << fibonacci_non_tailed(4) << std::endl;
-	std::cout << fibonacci_non_tailed(5) << std::endl;
+	for (int i = 0; i <= 5; i++)
+	{
+		std::cout << fibonacci_non_tailed(i) << std::endl;
+	}
 }
