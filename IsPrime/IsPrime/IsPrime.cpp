@@ -2,9 +2,12 @@
 
 int main()
 {
-    unsigned long long number = 67280421310721;
+    unsigned long long number = 0;
 
-    for (unsigned long long i = 2; i < sqrt(number); i++)
+    std::cout << "Number=";
+    std::cin >> number;
+
+    for (unsigned long i = 2; i < sqrt(number); i++)
     {
         if (number % i == 0)
         {
