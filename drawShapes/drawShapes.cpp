@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdio>
-
-using namespace std;
+#include <cmath>
 
 void drawTriangle(int length)
 {
@@ -44,75 +43,30 @@ void drawTrapezoid(int length)
 	{
 		printf("* ");
 	}
+
 	printf("\n");
+
 	for (int i = 0; i < length - 2; i++)
 	{
 		for (int j = 0; j < length - i - 1; j++)
 		{
 			printf(" ");
 		}
+
 		printf("*");
-		for (int j = 0; j < i*2 + 1; j++)
+
+		for (int j = 0; j < 2 * length + i * 2 - 1; j++)
 		{
 			printf(" ");
 		}
+
 		printf("*");
-		for (int j = 0; j < (5 + (length - 5) * 2) - i * 2; j++)
-		{
-			printf(" ");
-		}
-		printf("*");
-		for (int j = 0; j < i * 2 + 1; j++)
-		{
-			printf(" ");
-		}
-		printf("*");
+
 		printf("\n");
 	}
 	for (int i = 0; i < length * 2 - 1; i++)
 	{
 		printf(" *");
-	}
-}
-
-void chehulche(int r)
-{
-	// IMPORTANT
-	// arr_size = r*2 + 1 
-	const int arr_size = 31;
-	char arr[arr_size][arr_size];
-
-	for (int x = 0; x < arr_size; x++)
-	{
-		for (int y = 0; y < arr_size; y++)
-		{
-			arr[x][y] = ' ';
-		}
-	}
-
-	float console_ratio = 4.0 / 3.0;
-	float a = console_ratio * r;
-	float b = r;
-
-	for (int y = -r; y <= r; y++)
-	{
-		for (int x = -console_ratio * r; x <= console_ratio * r; x++)
-		{
-			float d = (x / a) * (x / a) + (y / b) * (y / b);
-			if (d > 0.90 && d < 1.1)
-			{
-				arr[y + r][x + r] = '*';
-			}
-		}
-	}
-
-	for (int x = 0; x < arr_size; x++)
-	{
-		for (int y = 0; y < arr_size; y++)
-		{
-			cout << arr[x][y];
-		}
-		cout << "\n";
 	}
 }
 
@@ -159,14 +113,14 @@ void circle(int r)
 			float d = sqrt((x / a) * (x / a) + (y / b) * (y / b));
 			if (d > 0.90 && d < 1.1)
 			{
-				cout << "X";
+				printf("X");
 			}
 			else
 			{
-				cout << " ";
+				printf(" ");
 			}
 		}
-		cout << endl;
+		printf("\n");
 	}
 }
 
@@ -177,8 +131,6 @@ int main()
 	drawTrapezoid(10);
 	printf("\n\n");
 	circle(5);
-	printf("\n\n");
-	chehulche(15);
 	printf("\n\n");
 	squaredCircle(10);
 }
