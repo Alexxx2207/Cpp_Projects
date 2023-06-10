@@ -1,12 +1,13 @@
 #include <iostream>
+#include <cmath>
 
 const char fill = '#';
 const char empty = ' ';
-const short int fieldSize = 51;
+const short int fieldSize = 51 ;
 const short int center = fieldSize / 2;
-const short int radius = 21;
+const short int radius = ceil((fieldSize - 4) / 2);
 
-void bresenham(char field[][fieldSize])
+void bresenham(char field[fieldSize][fieldSize])
 {
     short int x = 0;
     short int y = radius;
@@ -29,18 +30,17 @@ void bresenham(char field[][fieldSize])
         {
             x++;
             d += 4 * x + 6;
-
         }
 
-        field[center - y][center + x] = empty;
-        field[center - y][center - x] = empty;
-        field[center + y][center - x] = empty;
-        field[center + y][center + x] = empty;
+        field[center - y][center + x] = fill;
+        field[center - y][center - x] = fill;
+        field[center + y][center - x] = fill;
+        field[center + y][center + x] = fill;
 
-        field[center - x][center + y] = empty;
-        field[center + x][center - y] = empty;
-        field[center - x][center - y] = empty;
-        field[center + x][center + y] = empty;
+        field[center - x][center + y] = fill;
+        field[center + x][center + y] = fill;
+        field[center + x][center - y] = fill;
+        field[center - x][center - y] = fill;
     }
 }
 
